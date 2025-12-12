@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeDownloader - Premium YouTube Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-brands fa-youtube"></i>
+                <span>TubeDownloader</span>
+            </div>
+            <p class="tagline">Download videos in premium quality</p>
+        </header>
+
+        <main>
+            <div class="search-box">
+                <input type="text" id="urlInput" placeholder="Paste YouTube URL here..." autocomplete="off">
+                <button id="fetchBtn" class="btn-primary">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Fetching video info...</p>
+            </div>
+
+            <div id="error" class="hidden">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span id="errorMsg"></span>
+            </div>
+
+            <div id="result" class="hidden">
+                <div class="video-card">
+                    <img id="thumbnail" src="" alt="Video Thumbnail">
+                    <div class="video-info">
+                        <h2 id="videoTitle"></h2>
+                        <p id="videoDuration"><i class="fa-regular fa-clock"></i> <span></span></p>
+                    </div>
+                </div>
+
+                <div class="download-options">
+                    <h3>Select Quality</h3>
+                    <div id="formatsList" class="formats-grid">
+                        <!-- Formats will be injected here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 TubeDownloader. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
